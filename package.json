@@ -1,0 +1,55 @@
+{
+  "name": "basicstart2017",
+  "version": "0.0.1",
+  "description": "A general Default Start Project",
+  "main": "index.js",
+  "scripts": {
+    "css": "node-sass -o dist/css src/styles --source-map-embed",
+    "auroprefixer": "postcss .u auroprefixer --autoprefixer.browsers '> 5%, ie7' -r dist/css/*",
+    "build:css": "npm run css && npm run autoprefixer",
+    "build:js": "babel src/js --out-dir dist/js",
+    "js": "babel src/js --out-dir dist/js",
+    "watch:css": "onchange src/styles/*.scss -- npm run build:css",
+    "watch:js": "onchange src/js/*.js -- npm run js",
+    "serve": "browser-sync start server dist --files dist",
+    "dev": "npm run serve & npm run watch:css",
+    "lint:js": "eslint src/js/**/*.js",
+    "lint:sass": "sass-lint src/styles/**/*.scss -c -v",
+    "lint": "npm run lint:sass && npm run lint:js",
+    "validate": "npm ls",
+    "start": "node ./script.js",
+    "test": "mocha --compilers js:babel-register  ./src/test/**/*.spec.js"
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablojavierjimenez/basicStart2017.git"
+  },
+  "author": "pablojavierjimenez\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D \u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D \u001b[F",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pablojavierjimenez/basicStart2017/issues"
+  },
+  "homepage": "https://github.com/pablojavierjimenez/basicStart2017#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.13",
+    "chai": "^4.1.2",
+    "eslint": "^4.7.0",
+    "mocha": "^3.5.3",
+    "node-sass": "^4.5.3",
+    "onchange": "^3.2.1",
+    "parallelshell": "^3.0.1",
+    "postcss-cli": "^4.1.1",
+    "precommit-hook": "^3.0.0",
+    "sass-lint": "^1.11.1"
+  }
+}
