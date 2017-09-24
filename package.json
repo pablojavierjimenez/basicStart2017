@@ -33,7 +33,6 @@
     "serve:bs": "browser-sync start server dist --files dist"
   },
   "pre-commit": [
-    "lint",
     "test"
   ],
   "repository": {
