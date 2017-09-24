@@ -1,0 +1,12 @@
+@import './globals';
+
+body {
+  background-color: $magenta;
+
+  h1 {
+    background-color: $black;
+    color: $withe;
+    border-radius: 5px;
+    display: flex;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  // Configurar patrones globales para excluir archivos y carpetas.
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true
+  },
+  "stylelint.enable": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "jscs.enable": true
+}

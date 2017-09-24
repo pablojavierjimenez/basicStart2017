@@ -1,0 +1,8 @@
+-   id: stylelint
+    name: stylelint
+    entry: stylelint
+    language: node
+    files: \.(css|scss|sass)$
+    args: []
+
+    minimum_pre_commit_version: 0.7.0

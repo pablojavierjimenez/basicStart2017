@@ -19,5 +19,6 @@ y su lista de comandos aquí:
 #### Styles and Sass
 #### Javascript and Babel
 #### Linters
+eslint hubo que instalarrlo global
  - CSS
  - JS
